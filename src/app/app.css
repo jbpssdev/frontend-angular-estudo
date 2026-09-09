@@ -1,0 +1,188 @@
+/* Reseta o body e aplica a fonte em tudo sem bloqueio */
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Trava em 75rem e centraliza */
+.container {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 1. Header */
+.faixa-header {
+  background-color: #1e293b;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+}
+
+.logo h2 {
+  margin: 0;
+  color: #f59e0b;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.acoes button {
+  background-color: #f59e0b;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 2. Miolo (75% e 25%) */
+.layout-corpo {
+  display: flex;
+  min-height: calc(100vh - 4.5rem - 4rem);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+
+.conteudo-principal {
+  flex: 3;
+  background-color: #f1f5f9;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.barra-lateral {
+  flex: 1;
+  background-color: #e2e8f0;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.barra-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.barra-lateral li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+/* 3. Grade de Produtos e Cards */
+.cabecalho-secao {
+  margin-bottom: 1.5rem;
+}
+
+.cabecalho-secao h1 {
+  font-size: 1.8rem;
+  color: #0f172a;
+}
+
+.cabecalho-secao p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.card-produto {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-categoria {
+  align-self: flex-start;
+  background-color: #e2e8f0;
+  color: #334155;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.card-produto h3 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.card-produto .descricao {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.rodape-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.8rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.rodape-card .preco {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.rodape-card button {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.rodape-card button:hover {
+  background-color: #1e293b;
+}
+
+/* 4. Rodapé */
+.faixa-rodape {
+  background-color: #0f172a;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+.rodape-conteudo {
+  text-align: center;
+  color: #94a3b8;
+}
