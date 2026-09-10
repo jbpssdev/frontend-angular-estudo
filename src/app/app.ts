@@ -1,6 +1,6 @@
 import { Component, signal, ViewEncapsulation } from '@angular/core';
 
-// typescript aqui!
+//Aqui é a tipagem! Criamos um contrato rígido usando TypeScript. O uso do Union type ('' | '') impede em tempo de compilação que qualquer categoria inválida seja atribuída aos itens.
 export interface ItemCardapio {
   id: number;
   nome: string;
@@ -22,6 +22,8 @@ export interface ItemCardapio {
   //Desativando isolamento: Por padrão, o Angular blinda as regras do componente para não afetarem o restante da página. Ao desligar essa barreira, permitimos que as regras escritas no componente afetem diretamente a casca externa (html e body). No caso o ViewEncapsulation.None
   encapsulation: ViewEncapsulation.None
 })
+
+//Cria um sinal reativo contendo uma string simples (Estado reativo com Signals)
 export class App {
   nomeBar = signal('Barzinho');
 
