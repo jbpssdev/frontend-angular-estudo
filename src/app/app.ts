@@ -11,10 +11,15 @@ export interface ItemCardapio {
 
 @Component({
   selector: 'app-root',
+
+  //Aqui, estamos informando ao Angular que a classe App controla uma interface visual. Configuramos ele como standalone: true
   standalone: true,
+  
   imports: [],
   templateUrl: './app.html',
   styleUrl: './app.css',
+
+  //Desativando isolamento: Por padrão, o Angular blinda as regras do componente para não afetarem o restante da página. Ao desligar essa barreira, permitimos que as regras escritas no componente afetem diretamente a casca externa (html e body). No caso o ViewEncapsulation.None
   encapsulation: ViewEncapsulation.None
 })
 export class App {
